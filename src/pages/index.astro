@@ -24,10 +24,10 @@ const images = [
 				<span class="opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ml-1 text-gray-400 font-light">]</span>
 			</span>
 		</a>
-		<div class="flex items-center gap-6">
-			<a href="/series" class="text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-gray-900 transition-colors">Series</a>
-			<a href="/over-mij" class="text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-gray-900 transition-colors">Over mij</a>
-			<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-gray-900 transition-colors flex items-center gap-2">
+		<div class="flex items-center gap-4 sm:gap-6">
+			<a href="/series" class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-gray-900 transition-colors">Series</a>
+			<a href="/over-mij" class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-gray-900 transition-colors">Over mij</a>
+			<a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-gray-500 hover:text-gray-900 transition-colors flex items-center gap-2">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
 				<span class="hidden sm:inline">Instagram</span>
 			</a>
@@ -36,23 +36,23 @@ const images = [
 
 	<main class="w-full">
 		<!-- Hero Section -->
-		<section class="relative h-[80vh] flex flex-col items-center justify-center px-4 overflow-hidden">
+		<section class="relative min-h-[60vh] flex flex-col items-center justify-center px-4 pt-32 pb-16 sm:pt-40 sm:pb-24 overflow-hidden">
 			<!-- Subtle background gradient/grain for premium feel -->
 			<div class="absolute inset-0 bg-gradient-to-b from-gray-50 to-white opacity-80 z-0"></div>
 			
-			<div class="z-10 text-center max-w-4xl mx-auto flex flex-col items-center mb-32 sm:mb-40">
+			<div class="z-10 text-center max-w-4xl mx-auto flex flex-col items-center">
 				<h1 class="text-4xl sm:text-6xl md:text-8xl font-extralight tracking-tight mb-6 animate-fade-in-slow text-gray-900">
 					Echte. <span class="italic font-light text-gray-400">Momenten.</span>
 				</h1>
-				<p class="text-lg sm:text-xl text-gray-600 font-light max-w-2xl leading-relaxed animate-fade-in-delayed hidden sm:block">
+				<p class="text-base sm:text-lg md:text-xl text-gray-600 font-light max-w-2xl leading-relaxed animate-fade-in-delayed mt-4 px-4">
 					Echte momenten. Ongeënsceneerd vastgelegd. Straatfotografie met een focus op authenticiteit en de rauwe realiteit.
 				</p>
 			</div>
 		</section>
 
 		<!-- Masonry Gallery -->
-		<section id="gallery" class="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 -mt-64 sm:-mt-80 relative z-20 pb-10">
-			<div class="masonry-grid pt-10">
+		<section id="gallery" class="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 relative z-20 pb-20">
+			<div class="masonry-grid pt-10 mt-8 sm:mt-12">
 				{images.map((image) => (
 					<div class="masonry-item fade-up-element overflow-hidden bg-gray-50 rounded-sm group relative shadow-sm hover:shadow-md transition-shadow duration-500">
 						<img 
