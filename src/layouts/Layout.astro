@@ -61,5 +61,30 @@ const jsonLd = {
 	</head>
 	<body class="bg-white text-gray-900 font-sans antialiased selection:bg-gray-900 selection:text-white">
 		<slot />
+		
+		<!-- Global Image Protection Script -->
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const images = document.querySelectorAll('img');
+				images.forEach(img => {
+					// Prevent right-click "Save Image As..."
+					img.addEventListener('contextmenu', (e) => e.preventDefault());
+					// Prevent drag-to-desktop
+					img.addEventListener('dragstart', (e) => e.preventDefault());
+				});
+				
+				// Optional fallback: global listener just in case new images are added dynamically (e.g. infinite scroll)
+				document.addEventListener('contextmenu', (e) => {
+					if ((e.target as HTMLElement)?.tagName === 'IMG') {
+						e.preventDefault();
+					}
+				});
+				document.addEventListener('dragstart', (e) => {
+					if ((e.target as HTMLElement)?.tagName === 'IMG') {
+						e.preventDefault();
+					}
+				});
+			});
+		</script>
 	</body>
 </html>
