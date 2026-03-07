@@ -8,8 +8,20 @@ interface Props {
 
 const { 
   title, 
-  description = "De minimalistische portfolio van freelance fotograaf Jasper Schut. Pure fotografie, geen poespas." 
+  	description = "Jasper Schut — Straatfotograaf. Ontdek een minimalistische collectie van analoge en digitale straatfotografie, vastgelegd met een scherp oog voor het alledaagse." 
 } = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jasper Schut",
+  "jobTitle": "Street Photographer",
+  "url": "https://jasperschut.nl",
+  "sameAs": [
+    "https://instagram.com/jas.perspectives"
+  ],
+  "description": description
+};
 ---
 
 <!doctype html>
@@ -27,6 +39,9 @@ const {
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- JSON-LD Structured Data -->
+		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
 		<!-- OpenGraph Meta Tags -->
 		<meta property="og:title" content={title} />
