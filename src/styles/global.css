@@ -145,14 +145,15 @@ img {
     }
 
     .ig-text {
-        transition: background 0.3s ease, -webkit-text-fill-color 0.3s ease;
+        background: linear-gradient(to right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: currentColor;
+        transition: -webkit-text-fill-color 0.4s ease;
     }
 
     .group:hover .ig-text {
-        background: linear-gradient(to right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-clip: text;
     }
 }
 
